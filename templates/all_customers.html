@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(255, 255, 255);
+        }
+
+h1 {
+  color: #000000;
+}
+
+.container1 {
+  
+  background-color: #FFFFFF;
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px;
+  
+        }
+
+        table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+  
+}
+th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+  background-color: #00008B;
+  color: #F8F8FF
+}
+#00008B
+
+tr:nth-child(even) {
+  background-color: #FFFAF0;
+}
+tr:nth-child(odd) {
+  background-color: #00BFFF;
+}
+
+.btn-primary {
+  background-color: #000000;
+}
+</style>
+</head>
+<body>
+    <br>
+    <br>
+    <h1 style="text-align:center"><b>Welcome to SuperBank Portal</b><br>SuperBank Customers</h1>
+    <br>
+    <br>
+    <br>
+    <div class='container1'>
+          
+          <table>
+            <tr>
+              <th>Account Holder Name</th>
+              <th>Account Number</th>
+              <th>Contact Number</th>
+              <th>Account Balance</th>
+              
+            </tr>
+          
+          {% for i in customer %}
+           
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.account_no}}</td>
+                <td>{{i.phno}}</td>
+                <td>{{i.balance}}</td>
+                
+            </tr>
+          
+          {% endfor %}
+         </table>
+          
+        
+      </div>
+      <br>
+      <br>
+      <div class="container bg-light">
+      <div class="col-md-12 text-center">
+    <script>
+      function myFunction() {
+        location.replace("/transfer")
+      }
+      </script>
+    <button type="button" class="btn btn-primary" onclick="myFunction()">Transfer Cash</button>
+  </div>
+</div>
+    
+</body>
+</html>
