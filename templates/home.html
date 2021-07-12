@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(255, 255, 255);
+        }
+
+h1 {
+  color: #000000;
+}
+.btn-primary{
+  background-color: #000000;
+}
+.container-img{
+  text-align: center;
+  display: block;
+}
+</style>
+</head>
+<body>
+    <br>
+    <br>
+    <h1 style="text-align:center"><b>Sparks Foundation</b><br>SuperBank System</br></h1>
+    <div class="container-img">
+      <p>
+        {% load static %} <img src="{% static "dj_app/media/bank.jpg" %}" alt="home" /> 
+      </p>
+</div>
+<br>
+<br>
+    <div class="container bg-light">
+      <div class="col-md-12 text-center">
+        <script>
+          function myFunction() {
+            location.replace("/all_customers")
+          }
+          </script>
+        <button type="button" class="btn btn-primary" onclick="myFunction()">Click Here to check our Customers</button>
+      </div>
+    </div>
+ 
+</body>
+</html>

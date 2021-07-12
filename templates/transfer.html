@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>home page</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background-color: rgb(255, 255, 255);
+        }
+
+h1 {
+  color: #032047;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #547ce3;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+    <br>
+    <br>
+    <h1 style="text-align:center"><b>Cash Transaction</b><br><br>Fill to continue with the transaction</h1>
+    <br>
+    <br>
+    
+    <div class="container">
+      <div class="col-md-12 text-center">
+        <form action="" method='POST'>{% csrf_token %}
+            
+              
+          <div class='form-group'>
+              <label for="sender"><b>The Account Number of Sender</b></label>
+              <input type="text" placeholder="Enter Account Number Here" name="sender" id="sender" required>
+          </div>
+
+          <div class='form-group'>
+              <label for="receiver"><b>The Account Number of Receiver</b></label>
+              <input type="text" placeholder="Enter Account Number Here" name="receiver" id="receiver" required>
+          </div>
+
+          <div class='form-group'>
+              <label for="amount"><b>The Amount to be transfered</b></label>
+              <input type="text" placeholder="Enter Amount you wish to transfer" name="amount" id="amount" required>
+          </div>
+              <hr>
+              
+          
+              <button type="submit" class="registerbtn">DONE</button>
+            
+            
+            
+          </form>
+        
+      </div>
+    </div>
+ 
+</body>
+</html>
